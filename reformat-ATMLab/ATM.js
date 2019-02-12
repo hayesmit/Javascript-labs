@@ -20,7 +20,7 @@ class Bank{
         if (amount > this.bank[CN]["balance"]){
             return `sorry you only have ${this.bank[CN][1]} in your account we can not give you ${amount}.`}
         else{
-            this.bank[CN]["balance"] -= amount
+            this.bank[CN]["balance"] -= parseFloat(amount)
             this.transactions[CN] += [`withdrawal of ${amount}, `]
             return `Your just withdrew ${amount}, your balance is now ${this.bank[CN]["balance"]}`}
 }

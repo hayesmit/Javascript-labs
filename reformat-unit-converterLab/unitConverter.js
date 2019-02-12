@@ -1,43 +1,50 @@
 //lab09-Unit_Converter.py
 
-let distance = parseFloat(prompt("what distance in do you want to convert to meters? example 167 >> "))
-let currentUnits = prompt("what is the current unit of measurement, ft, mi, m, km, yd, in?")
-let finalUnits = prompt("What units would you like the result to be in? in, ft, yd, m, mi, km? >> ")
+let distance = document.getElementById("distance")
+let currentUnits = document.getElementById("Sunits")
+let finalUnits = document.getElementById("Funits")
+
+document.getElementById("submit").addEventListener("click", function(e){
 let conversion;
 
-if (currentUnits === "ft"){
-    conversion = distance * .3048
+if (currentUnits.value === "ft"){
+    conversion = distance.value * .3048
     }
-else if (currentUnits == "mi"){
-    conversion = distance * 1609.34
+else if (currentUnits.value == "mi"){
+    conversion = distance.value * 1609.34
     }
-else if (currentUnits =="m"){
-    conversion = distance
+else if (currentUnits.value =="m"){
+    conversion = distance.value
     }
-else if (currentUnits == "km"){
-    conversion = distance * 1000
+else if (currentUnits.value == "km"){
+    conversion = distance.value * 1000
     }
-else if (currentUnits == "yd"){
-    conversion = distance * 0.9144
+else if (currentUnits.value == "yd"){
+    conversion = distance.value * 0.9144
     }
-else if (currentUnits == "in"){
-    conversion = distance * 0.0254
+else if (currentUnits.value == "in"){
+    conversion = distance.value * 0.0254
     }
 
-if (finalUnits == "ft"){
+if (finalUnits.value == "ft"){
     conversion /= .3048
     }
-else if (finalUnits == "mi"){
+else if (finalUnits.value == "mi"){
     conversion /= 1609.34
     }
-else if (finalUnits == "km"){
+else if (finalUnits.value == "km"){
     conversion /= 1000
     }
-else if (finalUnits == "yd"){
+else if (finalUnits.value == "yd"){
     conversion /= 0.9144
     }
-else if (finalUnits == "in"){
+else if (finalUnits.value == "in"){
     conversion /= 0.0254
     }
 
-alert(`${distance}  ${currentUnits} equals ${conversion} ${finalUnits}`)
+                    e.preventDefault();
+                    let final = document.createElement("li");
+                    final.innerText = `${distance.value}  ${currentUnits.value} equals ${conversion} ${finalUnits.value}`;
+                    document.getElementById("ul").appendChild(final);
+});
+

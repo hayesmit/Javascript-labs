@@ -1,0 +1,36 @@
+body{
+    background-color: #6bffff
+    }
+
+.convert{
+        display: flex;
+        align-items:center;
+        }
+
+.convert> h1{
+    flex:1;
+    text-align: center;
+    }
+
+form{
+    display: flex;
+    text-align: center;
+    width: 80%;
+    margin: auto auto auto auto;
+    }
+
+form > .inputs{
+    flex:1 1 .5 1 1;
+    text-align:center;
+    }
+
+.results > h1{
+text-align:center;}
+
+.display{
+    height: 200px;
+    width: 40%;
+    background-color: white;
+    margin: auto auto auto auto;
+    text-align: center;
+}

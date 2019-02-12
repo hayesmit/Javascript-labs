@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="unitConverter.js"></script>
+    <link rel="stylesheet" type="text/css" href="unit_converter.css">
+
 </head>
 <body>
+<div class="convert">
+    <h1>From</h1>
+    <h1>To</h1>
+</div>
 
+    <form>
+        <input name="distance" type="text" id="distance" placeholder="number" required title="must be a number" pattern="[0-9]{1,}(?:\.\[0-9]{1,})">
+        <select required class="inputs" name="Sunits" id="Sunits">
+          <option value="">select unit</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+          <option value="mi">Miles</option>
+          <option value="m">Meters</option>
+          <option value="km">Kilometers</option>
+          <option value="yd">Yards</option>
+          <option value="cm">Centimeters</option>
+        </select>
+        <p class="inputs"> =    ? </p>
+        <select required class="inputs" id="Funits">
+          <option value="">select unit</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+          <option value="mi">Miles</option>
+          <option value="m">Meters</option>
+          <option value="km">Kilometers</option>
+          <option value="yd">Yards</option>
+          <option value="cm">Centimeters</option>
+        </select>
+        <button type="submit" id="submit" class="inputs">submit</button>
+    </form>
+<div class="results">
+
+    <h1> Results</h1>
+</div>
+<div class="display">
+<ul id="ul">
+</ul>
+</div>
+
+<script src="unitConverter.js"></script>
 </body>
 </html>
