@@ -9,21 +9,29 @@
 </head>
 <body>
 <div class="screen">
-<p>hi</p>
-    <div class="grid-container">
-        <button type="button" class="grid-item">1</button>
-        <button type="button" class="grid-item">2</button>
-        <button type="button" class="grid-item">3</button>
-        <button type="button" class="grid-item">4</button>
-        <button type="button" class="grid-item">5</button>
-        <button type="button" class="grid-item">6</button>
-        <button type="button" class="grid-item">7</button>
-        <button type="button" class="grid-item">8</button>
-        <button type="button" class="grid-item">9</button>
-    </div>
-</div>
+  <input type="text" required pattern="[0-9]{5}" id="card" placeholder="What is your 5 digit card number" >
+    <button id="cc">submit</button>
+    <p id="balance">Balance:</p>
+    <input type="text" pattern="[0-9]" id="damount" placeholder="How much are you depositing">
+    <button id="deposit">Deposit</button>
+    <input type="text" pattern="[0-9]" id="wamount" placeholder="How much are you withdrawing">
+    <button id="withdrawal">Withdrawal:</button>
+    <p >Transaction History:</p>
+    <p id="transactions"></p>
+    <!--<div class="grid-container">-->
+    <!--<div class="grid-container">-->
+        <!--<button type="button" class="grid-item">1</button>-->
+        <!--<button type="button" class="grid-item">2</button>-->
+        <!--<button type="button" class="grid-item">3</button>-->
+        <!--<button type="button" class="grid-item">4</button>-->
+        <!--<button type="button" class="grid-item">5</button>-->
+        <!--<button type="button" class="grid-item">6</button>-->
+        <!--<button type="button" class="grid-item">7</button>-->
+        <!--<button type="button" class="grid-item">8</button>-->
+        <!--<button type="button" class="grid-item">9</button>-->
+    <!--</div>-->
+<!--</div>-->
 
-
-<!--<script src="ATM.js"></script>-->
+<script src="ATM.js"></script>
 </body>
 </html>
