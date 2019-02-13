@@ -1,0 +1,59 @@
+body{
+display:flex;
+justify-content: center;
+align-items:center;
+}
+.row{display:flex;
+}
+
+
+.column{
+flex-grow: 2;
+}
+
+h2{
+text-align:center;
+}
+
+h1{
+font-size: 500%;
+text-align:center;
+}
+
+#black #jack{
+margin:auto auto auto auto
+}
+
+#cards{
+text-align:center;
+}
+
+.card{
+height:25%;
+width:20%;
+margin:auto auto auto auto;
+padding: 6%;
+font-size:150%;
+}
+
+button{
+border-radius:10px;
+}
+
+h2{
+font-size:200%;
+}
+
+.total{
+width: 20%;
+height:50px;
+background-color: green;
+margin: 18px 50px 30px 5px;
+}
+
+.advice{
+width: 40%;
+height:50px;
+background-color: green;
+margin: 18px 50px 30px 5px;
+}
