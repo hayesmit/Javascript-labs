@@ -6,3 +6,7 @@ background-color: #87ffdd;
 margin:auto;
 align:center;
 }
+
+input.checkedBox:checked + input.checkedField {
+        text-decoration: line-through;
+        }

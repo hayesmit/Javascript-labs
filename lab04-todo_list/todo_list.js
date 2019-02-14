@@ -1,17 +1,16 @@
 let todo = document.getElementById("new_todo");
-let counter = 0;
 
 todo.addEventListener("click", function(e){
 let work = document.createElement("li");
 let done = document.createElement("input");
 done.type = "checkbox";
+done.class = "checkedBox";
 work.appendChild(done);
 let field = document.createElement("input");
+field.class = "checkedField";
 work.appendChild(field);
 let dismiss = document.createElement("button");
 dismiss.innerText = "Delete";
-dismiss.id = counter;
-counter += 1 ;
 dismiss.addEventListener("click", function(e){
 dismiss.parentNode.remove();
 })
