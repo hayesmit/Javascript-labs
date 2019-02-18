@@ -1,0 +1,7 @@
+.body{
+display:flex;
+}
+
+.body > div.column{
+flex:1;
+}
