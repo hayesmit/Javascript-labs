@@ -13,7 +13,7 @@ body{
     }
 
 form{
-    display: flex;
+
     text-align: center;
     width: 80%;
     margin: auto auto auto auto;
@@ -29,8 +29,12 @@ text-align:center;}
 
 .display{
     height: 200px;
-    width: 40%;
+    width: 20%;
     background-color: white;
     margin: auto auto auto auto;
     text-align: center;
+}
+
+h1{
+font-size:5em;
 }
