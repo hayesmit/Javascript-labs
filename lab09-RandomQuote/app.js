@@ -2,19 +2,19 @@ let target = document.getElementById("target");
 let getQuoteButton = document.getElementById("quote-button");
 let textTarget = document.getElementById("textTarget");
 let currentPage =1;
-
-let nextPage = document.getElementById("nextPage")
+let nextPage = document.getElementById("nextPage");
 nextPage.addEventListener("click", function(e){
 currentPage +=1;
 doIt();
 });
-let previousPage = document.getElementById("previousPage")
+let previousPage = document.getElementById("previousPage");
 previousPage.addEventListener("click", function(e){
 currentPage -=1;
 doIt();
 });
 
 getQuoteButton.addEventListener("click", function(e) {
+currentPage =1;
 doIt();
 });
 function doIt(){
@@ -37,6 +37,18 @@ function doIt(){
             <p>${quote.body}</p>
             <p><i><a href="${quote.url}">${quote.author}</a></i></p>
             `
+            if (response.last_page === true){
+                nextPage.setAttribute('disabled', true);
+            }
+            if (response.last_page === false){
+                nextPage.removeAttribute('disabled');
+            }
+            if (currentPage > 1){
+                previousPage.removeAttribute('disabled');
+            }
+            if (currentPage === 1){
+                previousPage.setAttribute('disabled', true)
+            }
             let quoteDiv = document.createElement('div');
             quoteDiv.className="item";
             quoteDiv.innerHTML = resultHTML;
